@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yanbo</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,700,600' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      body
+      {
+        font-family:"Raleway", sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+      }
+      header h1
+      {
+        font-size: 60px;
+        font-weight: 400;
+      }
+      header h1 small
+      {
+        font-weight: 200;
+      }
+      header a:hover
+      {
+        text-decoration: none;
+      }
+      header a.active
+      {
+        color: #B22222;
+        text-decoration: underline;
+      }
+      header a.inactive
+      {
+        color: #888888;
+      }
+      .container
+      {
+        margin-top: 40px;
+      }
+      #content
+      {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 18px;
+      }
+      #content h2
+      {
+        font-size: 30px;
+        font-weight: 200;
+      }
+      #content dt,dd
+      {
+        margin-top: 8px;
+      }
+      #contact
+      {
+        margin-top: 20px;
+      }
+      .paper-title
+      {
+        font-weight: 300;
+        color: #000000;
+      }
+      .me
+      {
+        color: #B22222;
+      }
+      .paper
+      {
+        margin-top: 10px;
+      }
+      .footer
+      {
+        font-size: 15px;
+        font-weight: 200;
+        text-align:center;
+      }
+    </style>
+    <script type="text/javascript">
+      $("#coder").live("click", function() {
+        $("#researcher").removeClass("active");
+        $("#researcher").addClass("inactive");
+        $("#coder").removeClass("inactive");
+        $("#coder").addClass("active");
+
+        $("#content-researcher").hide("slow", function() {
+          $("#content-coder").show("slow");
+        });
+      });
+      $("#researcher").live("click", function() {
+        $("#researcher").removeClass("inactive");
+        $("#researcher").addClass("active");
+        $("#coder").removeClass("active");
+        $("#coder").addClass("inactive");
+
+        $("#content-coder").hide("slow", function() {
+          $("#content-researcher").show("slow");
+        });
+      });
+      $("#publications-hider").live("click", function() {
+        if ($("#publications-hider").html() == "hide") {
+          $("#publications").hide("slow");
+          $("#publications-hider").html("show");
+        } else {
+          $("#publications").show("slow");
+          $("#publications-hider").html("hide");
+        }
+      });
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <!-- the header -->
+      <div class="row-fluid">
+        <div class="span10 offset1">
+          <header>
+            <h1>
+              <font color="#B22222">Y</font>ANBO
+              <div class="pull-right">
+                <small>
+                  <a href="#" id="coder" class="active">coder</a> 
+                  :
+                  <a href="#" id="researcher" class="inactive">researcher</a>
+                </small>
+              </div>
+            </h1>
+          </header>
+        </div>
+      </div>
+
+      <!-- the main content -->
+      <div id="content">
+        <div class="row-fluid">
+          <div class="span10 offset1">
+
+            <div id="content-coder">
+              <h2>Projects</h2>
+              <dl class="dl-horizontal">
+                <dt>boboa</dt>
+                <dd>An open source weibo client for MacOS X. Get from <a href="http://wuyb.github.com/boboa/">github</a>.</dd>
+                <dt>云记帐</dt>
+                <dd>A personal finance management app. Available at <a href="http://itunes.apple.com/us/app/yun-ji-zhang/id501934215?mt=8">App Store</a>.</dd>
+              </dl>
+              <h2>Experiences</h2>
+              <dl class="dl-horizontal">
+                <dt>TopCoder</dt>
+                <dd>System Architect, 2006-2008, 2010-present.</dd>
+                <dt>RoxBeam</dt>
+                <dd>Software Engineer. 2005-2006</dd>
+              </dl>
+            </div>
+
+            <div id="content-researcher" style="display:none">
+              <h2>Research Interests</h2>
+              <dl class="dl-horizontal">
+                <dt>Database</dt>
+                <dd>index, storage, distributed database.</dd>
+                <dt>Internet of Things</dt>
+                <dd>IOT architecture, RFID, sensor data mining.</dd>
+              </dl>
+              <h2>Publications <small><a href="#" id="publications-hider">show</a></small></h2>
+              <div id="publications" style="display:none">
+                <dl class="dl-horizontal">
+                  <dt>2012</dt>
+                  <dd>
+                    <div class="paper"><span class="paper-title">Modeling Object Flows from Distributed and Sovereign RFID Data Streams for Efficient Tracking and Tracing</span>. <span class="me">Yanbo Wu</span>, Quan Z. Sheng, Hong Shen, and Sherali Zeadally. Transactions on Parallel and Distributed Systems (TPDS), accepted.</div>
+                    <div class="paper"><span class="paper-title">PeerTrack: A Platform for Tracking and Tracing Objects in Large-Scale Traceability Networks.</span> <span class="me">Yanbo Wu</span>, Quan Z. Sheng, Damith Ranasinghe and Lina Yao. EDBT 2012, Berlin, German.</div>
+                    <div class="paper"><span class="paper-title">Modeling Sovereign RFID Data Streams in Collaborative Traceable Networks.</span> <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Rui Zeng. WISE 2012, Paphos, Cyprus.</div>
+                    <div class="paper"><span class="paper-title">A Unified Framework for Distributed Managing Uncertain Data in RFID Traceability Networks.</span> Jiangang Ma, Quan Z. Sheng, Damith Ranasinghe and Rui Zeng and <span class="me">Yanbo Wu</span>. WISE 2012, Paphos, Cyprus.</div>
+                    <div class="paper"><span class="paper-title">A semantically enhanced service repository for user-centric service discovery and management.</span> Jian Yu, Quan Z Sheng, Jun Han, <span class="me">Yanbo Wu</span> and Chengfei Liu. Data and Knowledge Engineering 72, 202.</div>
+                  </dd>
+                  <dt>2011</dt>
+                  <dd>
+                    <div class="paper"><span class="paper-title">Facilitating Efficient Object Tracking in Large-Scale Traceability Networks.</span> <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe. The Computer Journal 54 (12), 2053-2071. </div>
+                    <div class="paper"><span class="paper-title">RFID enabled traceability networks: a survey.</span> <span class="me">Yanbo Wu</span>, Damith Ranasinghe, Quan Z. Sheng and Sherali Zeadally. Distributed and Parallel Databases, 1-47. </div>
+                    <div class="paper"><span class="paper-title">P2P Object Tracking in the Internet of Things.</span> <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe. ICPP 2011, Taipei, Taiwan.</div>
+                    <div class="paper"><span class="paper-title">Tracing Moving Objects in Internet-Based RFID Networks.</span> <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe. WAINA 2011, Singapore.</div>
+                  </dd>
+                  <dt>2010</dt>
+                  <dd>
+                    <div class="paper"><span class="paper-title">Enabling scalable RFID traceability networks.</span> <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe. AINA 2011, Perth, Australia.</div>
+                  </dd>
+                  <dt>2008</dt>
+                  <dd>
+                    <div class="paper"><span class="paper-title">Realizing the Internet of things in service-centric environments.</span> <span class="me">Yanbo Wu</span>. ICSOC 2008 PhD Symposium, Sydney, Australia.</div>
+                  </dd>
+                </dl>
+              </div>
+              <h2>Experiences</h2>
+              <dl class="dl-horizontal">
+                <dt>2012-present</dt>
+                <dd>Beijing Jiaotong University. Lecturer, 2012-present.</dd>
+                <dt>2009-2010</dt>
+                <dd>IBM Almaden Research Center (ARC). Research Intern. 2009-2010</dd>
+                <dt>2005</dt>
+                <dd>City University of Hong Kong (cityu). Research Assistant.</dd>
+                <dt>2003</dt>
+                <dd>IBM China Research Lab (CRL). Research Intern.</dd>
+              </dl>
+            </div>
+
+            <h2>Education</h2>
+            <dl class="dl-horizontal">
+              <dt>Ph.D</dt>
+              <dd>The University of Adelaide</dd>
+              <dt>B.E.</dt>
+              <dd>Tsinghua University</dd>
+            </dl>
+
+            <h2>Awards and Honors</h2>
+            <dl class="dl-horizontal">
+              <dt>2011</dt>
+              <dd>Google PhD Topup Scholarship (one of two). The University of Adelaide.</dd>
+              <dt>2009</dt>
+              <dd>TopCoder Open Development Champion.</dd>
+              <dt>2008</dt>
+              <dd>AFSI Scholarship. The University of Adelaide.</dd>
+              <dt>2008</dt>
+              <dd>IBM Traval Grant. ICSOC 2008.</dd>
+              <dt>2003</dt>
+              <dd>Secondary Scholarship. Tsinghua University.</dd>
+              <dt>2002</dt>
+              <dd>Secondary Scholarship. Tsinghua University.</dd>
+            </dl>
+
+            <div id="contact">
+              <h2>Contact</h2>
+              <dl class="dl-horizontal">
+                <dt>Email</dt>
+                <dd><img src="img/email.png"/></dd>
+              </dl>
+            </div>
+            <hr/>
+
+          </div>
+
+          <div class="span10 offset1 footer">
+            Designed and coded by Yanbo Wu. All rights reserved. &copy; 2012
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
