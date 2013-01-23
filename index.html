@@ -87,7 +87,8 @@
       }
     </style>
     <script type="text/javascript">
-      $("#coder").live("click", function() {
+    $(function(){
+      $("#coder").bind("click", function() {
         $("#researcher").removeClass("active");
         $("#researcher").addClass("inactive");
         $("#coder").removeClass("inactive");
@@ -97,7 +98,7 @@
           $("#content-coder").show("slow");
         });
       });
-      $("#researcher").live("click", function() {
+      $("#researcher").bind("click", function() {
         $("#researcher").removeClass("inactive");
         $("#researcher").addClass("active");
         $("#coder").removeClass("active");
@@ -107,7 +108,7 @@
           $("#content-researcher").show("slow");
         });
       });
-      $("#publications-hider").live("click", function() {
+      $("#publications-hider").bind("click", function() {
         if ($("#publications-hider").html() == "hide") {
           $("#publications").hide("slow");
           $("#publications-hider").html("show");
@@ -116,6 +117,7 @@
           $("#publications-hider").html("hide");
         }
       });
+    });
     </script>
   </head>
   <body>
@@ -150,8 +152,6 @@
               <dl class="dl-horizontal">
                 <dt>boboa</dt>
                 <dd>An open source weibo client for MacOS X. Get from <a href="http://wuyb.github.com/boboa/">github</a>.</dd>
-<!--                <dt>云记帐</dt>
-                <dd>A personal finance management app. Available at <a href="http://itunes.apple.com/us/app/yun-ji-zhang/id501934215?mt=8">App Store</a>.</dd>-->
               </dl>
               <h2>Experiences</h2>
               <dl class="dl-horizontal">
@@ -176,7 +176,7 @@
                   <dt>2012</dt>
                   <dd>
                     <div class="paper"><span class="paper-title">RFID: Opportunities and Challenges.</span>
-                      Book Chapter of <b>Wireless Technologies: 4G and Beyond, Springer, London, United Kingdom</b>. <span class="me">Yanbo Wu</span></div>
+                      Book Chapter of <b>Wireless Technologies: 4G and Beyond</b>, Springer, London. <span class="me">Yanbo Wu</span></div> 
                     <div class="paper"><span class="paper-title">On Robust Multicast in Multi-Channel Multi-Radio Wireless Mesh Networks.</span>
                       Rui Chen, Yidong Li, Yingpeng Sang, Hong Shen, Hui Tian and <span class="me">Yanbo Wu</span>.<br/>
                       PDCAT 2012, Beijing, China.</div>
