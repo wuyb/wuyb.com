@@ -1,298 +1,134 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Yanbo</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,700,600' rel='stylesheet' type='text/css'>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-    <style type="text/css">
-      body
-      {
-        font-family:"Raleway", sans-serif;
-        font-size: 20px;
-        font-weight: 200;
-      }
-      header h1
-      {
-        font-size: 60px;
-        font-weight: 400;
-      }
-      header h1 small
-      {
-        font-weight: 200;
-      }
-      header a:hover
-      {
-        text-decoration: none;
-      }
-      header a.active
-      {
-        color: #B22222;
-        text-decoration: underline;
-      }
-      header a.inactive
-      {
-        color: #888888;
-      }
-      .container
-      {
-        margin-top: 40px;
-      }
-      #content
-      {
-        margin-top: 30px;
-        margin-left: 20px;
-        font-size: 18px;
-      }
-      #content h2
-      {
-        font-size: 30px;
-        font-weight: 200;
-      }
-      #content dt,dd
-      {
-        margin-top: 8px;
-      }
-      #contact
-      {
-        margin-top: 20px;
-      }
-      .paper-title
-      {
-        font-weight: 500;
-        color: #000000;
-        display: block;
-      }
-      .me
-      {
-        font-weight: 500;
-        color: #B22222;
-      }
-      .paper
-      {
-        margin-top: 10px;
-        font-size: .9em;
-      }
-      .footer
-      {
-        font-size: 15px;
-        font-weight: 200;
-        text-align:center;
-      }
-    </style>
-    <script type="text/javascript">
-    $(function(){
-      $("#coder").bind("click", function() {
-        $("#researcher").removeClass("active");
-        $("#researcher").addClass("inactive");
-        $("#coder").removeClass("inactive");
-        $("#coder").addClass("active");
+<head>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width">
+  	<title>yanbo</title>
+	<link rel="stylesheet" href="css/foundation.css">
+ 	<script src="js/vendor/custom.modernizr.js"></script>
+ 	<style type="text/css">
+	 	body {
+			font-family: "Lucida Grande";
+		}
+		div#container {
+			padding-top: 200px;
+		}
+		div#name {
+			font-size: 3em;
+			font-weight: bold;
+			text-align: right;
+		}
+		span.initial {
+			color: #FF9800;
+		}
+		div#tagline {
+			font-size: 1.5em;
+			text-align: left;
+			margin-top: 22px;
+			color: #7E8AA2;
+		}
+		#tagline > a {
+			text-decoration: none;
+			font-weight: lighter;
+			color: #7E8AA2;
+		}
+		#tagline > a:hover {
+			color: #263248;
+		}
+		#tagline > a.selected {
+			color: #263248;
+		}
+		div.tagline-content {
+			padding-top: 20px;
+			font-size: 1.1em;
+			text-align: left;
+		}
+		div.tagline-content a {
+			font-weight: lighter;
+			color: #7E8AA2;
+		}
+		div.tagline-content a:hover {
+			font-weight: lighter;
+			color: #263248;
+		}
+		#writer-content {
+			padding-left: 130px;
+		}
+		#dreamer-content {
+			padding-left: 230px;
+		}
+		.dot {
+			color:#FF9800;
+		}
+		#contact {
+			margin-top: 20px;
+			margin-right: 30px;
+			text-align: right;
+		}
+	</style>
+</head>
 
-        $("#content-researcher").hide("slow", function() {
-          $("#content-coder").show("slow");
-        });
-      });
-      $("#researcher").bind("click", function() {
-        $("#researcher").removeClass("inactive");
-        $("#researcher").addClass("active");
-        $("#coder").removeClass("active");
-        $("#coder").addClass("inactive");
+<body>
+	<div id="container">
+		<div class="row">
+			<div class="large-10 large-centered columns">
+				<div class="row">
+					<div id="name" class="large-5 columns">
+						<span data-tooltip class="has-tip tip-top noradius" title="武">wu</span>
+						<span data-tooltip class="has-tip tip-top noradius" title="言博"><span class="initial">y</span>anbo</span>
+					</div>
+					<div class="large-7 columns">
+						<div id="tagline" class="row">
+							<a href="javascript;" id="developer">developer</a> <span class="dot">&bull;</span>
+							<a href="javascript;" id="writer">writer</a> <span class="dot">&bull;</span>
+							<a href="javascript;" id="dreamer">dreamer</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-5 columns">
+						<div id="contact">
+							<a href="http://linkedin.com/in/yanbowu"><img src="img/linkedin-icon.gif" width="24px" height="24px"/></a>&nbsp;
+							<a href="http://twitter.com/wuyanbo"><img src="img/twitter-icon.png" width="22px" height="22px"/></a>&nbsp;
+							<a href="http://www.facebook.com/wuyanbo"><img src="img/facebook-icon.png" width="20px" height="20px"/></a>&nbsp;
+							<a href="mailto:yanbo.wu@gmail.com"><img src="img/email-icon.png" width="20px" height="20px"/></a>
+							</div>
+					</div>
+					<div class="large-7 columns">
+						<div class="tagline-content" hidden="hidden" id="developer-content">
+							<div><a href="http://github.com/wuyb"><img src="img/blacktocat-32.png" width="20px" height="20px" /> github</a></div>	<br/>		
+							<div><a href="http://community.topcoder.com/tc?module=MemberProfile&cr=20076717"><img src="img/topcoder.gif" width="20px" height="20px" /> topcoder</a></div>		
+						</div>
+						<div class="tagline-content" hidden="hidden" id="writer-content">
+							<div><a href="http://blog.wuyb.com">techy blog</a></div>	<br/>		
+							<div><span data-tooltip class="has-tip tip-bottom noradius" title="in Chinese"><a href="http://a.wuyb.com">life</a></span></div>		
+						</div>
+						<div class="tagline-content" hidden="hidden" id="dreamer-content">
+							<div>Zz...</div>		
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		document.write('<script src=' +
+		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+		'.js><\/script>')
+	</script>
 
-        $("#content-coder").hide("slow", function() {
-          $("#content-researcher").show("slow");
-        });
-      });
-      $("#publications-hider").bind("click", function() {
-        if ($("#publications-hider").html() == "hide") {
-          $("#publications").hide("slow");
-          $("#publications-hider").html("show");
-        } else {
-          $("#publications").show("slow");
-          $("#publications-hider").html("hide");
-        }
-      });
-    });
-    </script>
-  </head>
-  <body>
-
-    <div class="container">
-
-      <!-- the header -->
-      <div class="row-fluid">
-        <div class="span10 offset1">
-          <header>
-            <h1>
-              <font color="#B22222">Y</font>ANBO
-              <div class="pull-right">
-                <small>
-                  as <a href="#" id="coder" class="active">coder</a> 
-                  :
-                  <a href="#" id="researcher" class="inactive">researcher</a>
-                </small>
-              </div>
-            </h1>
-          </header>
-        </div>
-      </div>
-
-      <!-- the main content -->
-      <div id="content">
-        <div class="row-fluid">
-          <div class="span10 offset1">
-
-            <div id="content-coder">
-              <h2>Projects</h2>
-              <dl class="dl-horizontal">
-                <dt>boboa</dt>
-                <dd>An open source weibo client for MacOS X. Get from <a href="http://wuyb.github.com/boboa/">github</a>.</dd>
-              </dl>
-              <h2>Experiences</h2>
-              <dl class="dl-horizontal">
-                <dt>TopCoder</dt>
-                <dd>System Architect, 2006-2008, 2010-present.</dd>
-                <dt>RoxBeam</dt>
-                <dd>Software Engineer. 2005-2006</dd>
-              </dl>
-            </div>
-
-            <div id="content-researcher" style="display:none">
-              <h2>Research Interests</h2>
-              <dl class="dl-horizontal">
-                <dt>Database</dt>
-                <dd>index, storage, distributed database.</dd>
-                <dt>Internet of Things</dt>
-                <dd>IOT architecture, RFID, sensor data mining.</dd>
-              </dl>
-              <h2>Publications <small><a href="#" id="publications-hider">show</a></small></h2>
-              <div id="publications" style="display:none">
-                <dl class="dl-horizontal">
-                  <dt>2012</dt>
-                  <dd>
-                    <div class="paper"><span class="paper-title">RFID: Opportunities and Challenges.</span>
-                      Book Chapter of <b>Wireless Technologies: 4G and Beyond</b>, Springer, London. <span class="me">Yanbo Wu</span></div> 
-                    <div class="paper"><span class="paper-title">On Robust Multicast in Multi-Channel Multi-Radio Wireless Mesh Networks.</span>
-                      Rui Chen, Yidong Li, Yingpeng Sang, Hong Shen, Hui Tian and <span class="me">Yanbo Wu</span>.<br/>
-                      PDCAT 2012, Beijing, China.</div>
-                    <div class="paper"><span class="paper-title">A Clustering Algorithm Based on Density-Grid for Stream Data.</span>
-                      Dandan Zhang, Hui Tian, Yingpeng Sang, Yidong Li, <span class="me">Yanbo Wu</span>, Jun Wu and Hong Shen.<br/>
-                      PDCAT 2012, Beijing, China.</div>
-                    <div class="paper"><span class="paper-title">Modeling Object Flows from Distributed and Sovereign RFID Data Streams for Efficient Tracking and Tracing.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng, Hong Shen, and Sherali Zeadally.<br/>
-                      Transactions on Parallel and Distributed Systems (TPDS), accepted.</div>
-                    <div class="paper"><span class="paper-title">PeerTrack: A Platform for Tracking and Tracing Objects in Large-Scale Traceability Networks.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng, Damith Ranasinghe and Lina Yao.<br/>
-                      EDBT 2012, Berlin, German.</div>
-                    <div class="paper"><span class="paper-title">Modeling Sovereign RFID Data Streams in Collaborative Traceable Networks.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Rui Zeng.<br/>
-                      WISE 2012, Paphos, Cyprus.</div>
-                    <div class="paper"><span class="paper-title">A Unified Framework for Distributed Managing Uncertain Data in RFID Traceability Networks.</span>
-                      Jiangang Ma, Quan Z. Sheng, Damith Ranasinghe and <span class="me">Yanbo Wu</span>.<br/>
-                      WISE 2012, Paphos, Cyprus.</div>
-                    <div class="paper"><span class="paper-title">A semantically enhanced service repository for user-centric service discovery and management.</span>
-                      Jian Yu, Quan Z Sheng, Jun Han, <span class="me">Yanbo Wu</span> and Chengfei Liu.<br/>
-                      Data and Knowledge Engineering 72, 202.</div>
-                  </dd>
-                  <dt>2011</dt>
-                  <dd>
-                    <div class="paper"><span class="paper-title">Facilitating Efficient Object Tracking in Large-Scale Traceability Networks.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe.<br/>
-                      The Computer Journal 54 (12), 2053-2071. </div>
-                    <div class="paper"><span class="paper-title">RFID enabled traceability networks: a survey.</span>
-                      <span class="me">Yanbo Wu</span>, Damith Ranasinghe, Quan Z. Sheng and Sherali Zeadally.<br/>
-                      Distributed and Parallel Databases, 1-47. </div>
-                    <div class="paper"><span class="paper-title">P2P Object Tracking in the Internet of Things.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe.<br/>
-                      ICPP 2011, Taipei, Taiwan.</div>
-                    <div class="paper"><span class="paper-title">Tracing Moving Objects in Internet-Based RFID Networks.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe.<br/>
-                      WAINA 2011, Singapore.</div>
-                  </dd>
-                  <dt>2010</dt>
-                  <dd>
-                    <div class="paper"><span class="paper-title">Enabling scalable RFID traceability networks.</span>
-                      <span class="me">Yanbo Wu</span>, Quan Z. Sheng and Damith Ranasinghe.<br/>
-                      AINA 2011, Perth, Australia.</div>
-                  </dd>
-                  <dt>2008</dt>
-                  <dd>
-                    <div class="paper"><span class="paper-title">Realizing the Internet of things in service-centric environments.</span>
-                      <span class="me">Yanbo Wu</span>.
-                      ICSOC 2008 PhD Symposium, Sydney, Australia.</div>
-                  </dd>
-                </dl>
-              </div>
-              <h2>Experiences</h2>
-              <dl class="dl-horizontal">
-                <dt>2012-present</dt>
-                <dd>Beijing Jiaotong University. Lecturer.</dd>
-                <dt>2009-2010</dt>
-                <dd>IBM Almaden Research Center (ARC). Research Intern.</dd>
-                <dt>2005</dt>
-                <dd>City University of Hong Kong (cityu). Research Assistant.</dd>
-                <dt>2003</dt>
-                <dd>IBM China Research Lab (CRL). Research Intern.</dd>
-              </dl>
-              <h2>Academic Services</h2>
-              <dl class="dl-horizontal">
-                <dt>Conf. Services</dt>
-                <dd>PDCAT 2012 (Publicity Chair), TPMC 2012 (PC member), APWeb 2012 (PC Member), EUSPN 2013 (PC Member)</dd>
-                <dt>Conf. Reviewer</dt>
-                <dd>APWeb 2012</dd>
-                <dt>Journal Reviewer</dt>
-                <dd>WWW Journal (WWWJ), IEEE Transactions on Computers (TC), Information Systems Frontiers (ISF), Computer Communications (ComCom), IEEE Transactions on Industrial Informatics (TII) </dd>
-              </dl>
-            </div>
-
-            <h2>Education</h2>
-            <dl class="dl-horizontal">
-              <dt>Ph.D</dt>
-              <dd>The University of Adelaide</dd>
-              <dt>B.E.</dt>
-              <dd>Tsinghua University</dd>
-            </dl>
-
-            <h2>Awards and Honors</h2>
-            <dl class="dl-horizontal">
-              <dt>2011</dt>
-              <dd>Google PhD Topup Scholarship (one of two). The University of Adelaide.</dd>
-              <dt>2009</dt>
-              <dd>TopCoder Open Development Champion.</dd>
-              <dt>2008</dt>
-              <dd>AFSI Scholarship. The University of Adelaide.</dd>
-              <dt>2008</dt>
-              <dd>IBM Traval Grant. ICSOC 2008.</dd>
-              <dt>2003</dt>
-              <dd>Secondary Scholarship. Tsinghua University.</dd>
-              <dt>2002</dt>
-              <dd>Secondary Scholarship. Tsinghua University.</dd>
-            </dl>
-
-            <div id="contact">
-              <h2>Contact</h2>
-              <dl class="dl-horizontal">
-                <dt>Email</dt>
-                <dd><img src="img/email.png"/></dd>
-              </dl>
-            </div>
-            <hr/>
-
-          </div>
-
-          <div class="span10 offset1 footer">
-            Designed and coded by Yanbo Wu. All rights reserved. &copy; 2013
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </body>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	    $('#tagline > a').on('click', function(event) {
+	    	$('#tagline a').removeClass('selected');
+			$(event.target).addClass('selected');
+	    	$('.tagline-content').hide();
+			$('#' + event.target.id + '-content').show();
+	    	return false;
+	    });
+	</script>
+</body>
 </html>
