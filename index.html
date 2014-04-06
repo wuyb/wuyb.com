@@ -1,134 +1,78 @@
+
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Yanbo Wu | Programmer</title>
+    <meta name="keywords" content="">
+    <meta name="author" content="Yanbo Wu">
+    <meta property="og:url" content="http://wuyb.com">
+    <meta property="og:title" content="Yanbo Wu | Programmer">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script> 
+    </style>
+  </head>
 
-<head>
-	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width">
-  	<title>yanbo</title>
-	<link rel="stylesheet" href="css/foundation.css">
- 	<script src="js/vendor/custom.modernizr.js"></script>
- 	<style type="text/css">
-	 	body {
-			font-family: "Lucida Grande";
-		}
-		div#container {
-			padding-top: 200px;
-		}
-		div#name {
-			font-size: 3em;
-			font-weight: bold;
-			text-align: right;
-		}
-		span.initial {
-			color: #FF9800;
-		}
-		div#tagline {
-			font-size: 1.5em;
-			text-align: left;
-			margin-top: 22px;
-			color: #7E8AA2;
-		}
-		#tagline > a {
-			text-decoration: none;
-			font-weight: lighter;
-			color: #7E8AA2;
-		}
-		#tagline > a:hover {
-			color: #263248;
-		}
-		#tagline > a.selected {
-			color: #263248;
-		}
-		div.tagline-content {
-			padding-top: 20px;
-			font-size: 1.1em;
-			text-align: left;
-		}
-		div.tagline-content a {
-			font-weight: lighter;
-			color: #7E8AA2;
-		}
-		div.tagline-content a:hover {
-			font-weight: lighter;
-			color: #263248;
-		}
-		#writer-content {
-			padding-left: 130px;
-		}
-		#dreamer-content {
-			padding-left: 230px;
-		}
-		.dot {
-			color:#FF9800;
-		}
-		#contact {
-			margin-top: 20px;
-			margin-right: 30px;
-			text-align: right;
-		}
-	</style>
-</head>
-
-<body>
-	<div id="container">
-		<div class="row">
-			<div class="large-10 large-centered columns">
-				<div class="row">
-					<div id="name" class="large-5 columns">
-						<span data-tooltip class="has-tip tip-top noradius" title="武">wu</span>
-						<span data-tooltip class="has-tip tip-top noradius" title="言博"><span class="initial">y</span>anbo</span>
-					</div>
-					<div class="large-7 columns">
-						<div id="tagline" class="row">
-							<a href="javascript;" id="developer">developer</a> <span class="dot">&bull;</span>
-							<a href="javascript;" id="writer">writer</a> <span class="dot">&bull;</span>
-							<a href="javascript;" id="dreamer">dreamer</a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-5 columns">
-						<div id="contact">
-							<a href="http://linkedin.com/in/yanbowu"><img src="img/linkedin-icon.gif" width="24px" height="24px"/></a>&nbsp;
-							<a href="http://twitter.com/wuyanbo"><img src="img/twitter-icon.png" width="22px" height="22px"/></a>&nbsp;
-							<a href="http://www.facebook.com/wuyanbo"><img src="img/facebook-icon.png" width="20px" height="20px"/></a>&nbsp;
-							<a href="mailto:yanbo.wu@gmail.com"><img src="img/email-icon.png" width="20px" height="20px"/></a>
-							</div>
-					</div>
-					<div class="large-7 columns">
-						<div class="tagline-content" hidden="hidden" id="developer-content">
-							<div><a href="http://github.com/wuyb"><img src="img/blacktocat-32.png" width="20px" height="20px" /> github</a></div>	<br/>		
-							<div><a href="http://community.topcoder.com/tc?module=MemberProfile&cr=20076717"><img src="img/topcoder.gif" width="20px" height="20px" /> topcoder</a></div>		
-						</div>
-						<div class="tagline-content" hidden="hidden" id="writer-content">
-							<div><a href="http://blog.wuyb.com">techy blog</a></div>	<br/>		
-							<div><span data-tooltip class="has-tip tip-bottom noradius" title="in Chinese"><a href="http://a.wuyb.com">life</a></span></div>		
-						</div>
-						<div class="tagline-content" hidden="hidden" id="dreamer-content">
-							<div>Zz...</div>		
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-		document.write('<script src=' +
-		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-		'.js><\/script>')
-	</script>
-
-	<script src="js/foundation.min.js"></script>
-	<script>
-		$(document).foundation();
-	    $('#tagline > a').on('click', function(event) {
-	    	$('#tagline a').removeClass('selected');
-			$(event.target).addClass('selected');
-	    	$('.tagline-content').hide();
-			$('#' + event.target.id + '-content').show();
-	    	return false;
-	    });
-	</script>
-</body>
+  <body>
+    <div id="intro">
+      <!-- Header-->
+      <header class="container pull-left">
+        <div class="row">
+          <div class="col-md-9">
+            <!-- Logo-->
+            <div>
+              <h1 class="name">Wu Yanbo</h2>
+              <p class="description">Programmer <span class="bullet">&#149;</span> <span class="gold">Beijing, China</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <h4>Projects &amp; Blog</h4>
+            <hr/>
+            <p>
+              <a href="http://blog.wuyb.com">blog</a><br/>
+              <a href="https://github.com/wuyb/boboa">boboa</a>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Contact</h4>
+            <hr/>
+            <p>
+              <a href="mailto:yanbo.wu@gmail.com">yanbo.wu@gmail.com</a>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Social</h4>
+            <hr/>
+            <p>
+              <a href="http://twitter.com/wuyanbo">Follow me on Twitter</a><br><a href="http://github.com/wuyb">Code with me on Github</a>
+              
+            </p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\\/script>')
+    </script>
+    <script src="js/plugins.js?v=3"></script>
+    <script src="js/vendor/superscrollorama.js"></script>
+    <script src="js/main.min.js?v=3"></script>
+  </body>
 </html>
